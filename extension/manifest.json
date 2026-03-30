@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel: Secure Password Audit",
+  "version": "1.0",
+  "description": "Analyze password security with entropy checks and breach detection.",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

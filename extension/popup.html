@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinel Security</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card">
+    <header>
+      <div class="logo">
+        <span class="shield-icon">🛡️</span>
+        <h1>Sentinel Security</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="input-group">
+        <input type="password" id="passwordInput" placeholder="Enter password to audit" autofocus>
+        <span id="togglePassword" class="eye-icon">👁️</span>
+      </div>
+
+      <button id="analyzeBtn">Analyze Password</button>
+
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <span>Analyzing...</span>
+      </div>
+
+      <div id="results" class="hidden">
+        <div class="strength-section">
+          <div class="strength-label">
+            <span>Strength Score</span>
+            <span id="scoreValue">0/4</span>
+          </div>
+          <div class="strength-meter">
+            <div id="strengthBar" class="bar"></div>
+          </div>
+        </div>
+
+        <div id="breachAlert" class="breach-alert hidden">
+          <span class="breach-icon">⚠️</span>
+          <span id="breachText">EXPOSED in X data breaches</span>
+        </div>
+
+        <div class="details">
+          <div class="detail-item">
+            <span class="label">Time to crack:</span>
+            <span id="crackTime" class="value">--</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Feedback:</span>
+            <p id="feedback" class="value feedback-text">--</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="errorMsg" class="error-msg hidden"></div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
